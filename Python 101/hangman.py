@@ -17,13 +17,20 @@ print(guessing_list)
 count=0
 #make a while loop to keep guesses going until equal
 while guessing_list!=char_list:
-    guess=input('Guess a letter')
+    guess=input('Guess a letter\n')
     #now make a if statement to check if the letter is inside the list
     for c in range(len(char_list)):
         if guess==char_list[c]:
             print('You Found a letter !')
             guessing_list[c]=char_list[c]
             print(guessing_list)
+        #For My else Statement, When the user get's it wrong, I need to draw a hangman
+            #   ______
+            #   |     |
+            #   0     | 
+            #  /|\    |
+            #   |     |
+            #  / \   /\
     count=count+1
 
 print('Congradulations ! You guessed the word : '+ word_to_guess +' in '+str(count)+' tries')
